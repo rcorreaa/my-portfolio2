@@ -48,10 +48,10 @@ nav a.current {
 }
 
 nav a:hover {
-	border-bottom-width:0.4em; /*step 2.2 task extra*/
-	border-bottom-style:solid; /*step 2.2 task extra*/
-	border-bottom-color:var(--color-accent); /*step 2.2 task extra*/
-	padding-bottom:0.1em; /*step 2.2 task extra*/
+	border-bottom-width:0.4em;
+	border-bottom-style:solid;
+	border-bottom-color:var(--color-accent);
+	padding-bottom:0.1em;
 	background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 
@@ -80,39 +80,8 @@ label {
 } */
 /* no grid */
 
-form {
-	display: grid; /*step 3.3 part 1*/
-	grid-template-columns: auto 1fr; /*step 3.3 part 1.1*/
-	gap: 1em; /*step 3.3 part 3*/
-}
-form label {
-	display: grid;/*step 3.3 part 2*/
-	grid-template-columns: subgrid;/*step 3.3 part 2*/
-}
-#button, label{
-	grid-column: 1 / -1; /*step 3.3 part 2*/
-}
-
 img{
 	max-width: 100%; /*step 4.2*/
-}
-
-.projects {
-	display:grid; /*step 4.3*/
-	grid-template-columns : repeat(auto-fill, minmax(15em, 1fr));/*step 4.3*/
-	min-width: 15em; /*step 4.3*/
-	max-width: 1fr; /*step 4.3*/
-}
-
-article{
-	margin: 10px; /*step 4.3*/
-	display: grid; /*step 4.4*/
-	grid-template-rows: subgrid; /*step 4.4*/
-	grid-row: span 3; /*step 4.4*/
-}
-
-article h2{
-	margin: 0; /*step 4.4*/
 }
 
 h1 {
@@ -133,3 +102,9 @@ header{
 	font-weight: bold; /*step 5 free*/
 	text-transform: uppercase; /*step 5 free*/
 } 
+.projects {
+	display:grid;
+	grid-template-columns : repeat(auto-fill, minmax(15em, 1fr));
+	min-width: 15em;
+	max-width: 1fr;
+}
