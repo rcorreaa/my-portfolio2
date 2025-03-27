@@ -10,18 +10,15 @@
         {url: "https://github.com/Mike-Kowalski", title:"Github"}
     ];
 
-    let colorScheme = "light dark";
+    let localStorage = globalThis.localStorage ?? {};
+    let colorScheme = localStorage.colorScheme ?? "light dark";
     let root = globalThis?.document?.documentElement;
+
     $: root?.style.setProperty("color-scheme", colorScheme);
 
-    let localStorage = globalThis.localStorage ?? {};
     $: localStorage.colorScheme = colorScheme;
 </script>
 
-<!-- {
-    JSON.stringify($page)
-} -->
-  
 <nav>
     {#each pages as p}
         <a
